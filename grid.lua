@@ -145,7 +145,7 @@ windower.register_event('addon command', function (...)
         end
     elseif S{'color', 'c'}:contains(cmd_1) then
         local grid_color = cmd[2] and cmd[2]:lower() or ''
-        if grid_color and S{'red', 'blue', 'yellow', 'white'}:contains(grid_color) then
+        if S{'red', 'blue', 'yellow', 'white'}:contains(grid_color) then
             grid_enable = true
             show_grid(grid_color)
         end
