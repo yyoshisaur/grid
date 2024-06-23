@@ -106,11 +106,11 @@ windower.register_event('mouse', function(type, x, y, delta, blocked)
     local mouse_pos_str = string.format('(%4d, %4d)', x, y)
     local mouse_pos_x = x
     local mouse_pos_y = y - 20
-    if x > windower.get_windower_settings().x_res - 50 then
-        mouse_pos_x = mouse_pos_x - 80
+    if x > windower.get_windower_settings().x_res - 75 then
+        mouse_pos_x = x - 80
     end
     if y < 50 then
-        mouse_pos_y = mouse_pos_y + 40
+        mouse_pos_y = y + 20
     end
 
     mouse_txt:pos(mouse_pos_x, mouse_pos_y)
